@@ -1,4 +1,13 @@
 GET /hello/{name}
+
+// Success
+Code = 200
 {
     "message" : "Hello {name}"
+}
+
+// Failure :: user not found
+Code = 404
+{
+    "message" : "User={name} not found"
 }

@@ -13,6 +13,9 @@ public class UserService {
 
     public String concatData(String name){
         Optional<User> result = userRepository.findByName(name);
-        return "Hello " + result.get().getName();
+        if(result.isPresent()){
+            return "Hello " + result.get().getName();
+        }
+        return "User=" + name + " not found";
     }
 }
