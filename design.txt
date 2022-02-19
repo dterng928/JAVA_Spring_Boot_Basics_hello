@@ -1,0 +1,4 @@
+GET /hello/{name}
+{
+    "message" : "Hello {name}"
+}
