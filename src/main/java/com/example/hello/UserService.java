@@ -16,6 +16,6 @@ public class UserService {
         if(result.isPresent()){
             return "Hello " + result.get().getName();
         }
-        return "User=" + name + " not found";
+        throw new UserNotFoundException(name);
     }
 }
